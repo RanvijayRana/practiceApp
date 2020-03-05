@@ -4,7 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  // encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent {
-  title = 'practice-app';
+  loadedFeature: string = 'recipe';
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
+
 }
